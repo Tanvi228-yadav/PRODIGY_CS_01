@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unique Caesar Cipher</title>
+</head>
+<body>
+    <h1>Caesar Cipher (Unique: Emoji Mode!)</h1>
+    <form method="POST">
+        <label>Mode:
+            <select name="mode">
+                <option value="e">Encrypt</option>
+                <option value="d">Decrypt</option>
+            </select>
+        </label><br>
+        <label>Theme:
+            <select name="theme">
+                <option value="letters">Letters</option>
+                <option value="emoji">Emoji</option>
+            </select>
+        </label><br>
+        <label>Shift: <input type="number" name="shift" min="1" max="25" value="3"></label><br>
+        <label>Message: <input type="text" name="message"></label><br>
+        <input type="submit" value="Go">
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
